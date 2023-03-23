@@ -45,7 +45,7 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    sudo: true
+    
     steps:
       - name: Install Azure CLI
         run: |
@@ -73,3 +73,4 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A0ECFFA851E44A39B6D6586178F177C0 }}
           package: .
           start-up-command: 'uvicorn main:app --reload'
+    sudo: true
