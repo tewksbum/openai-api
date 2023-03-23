@@ -63,7 +63,3 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_38D0139B22FC48D09E5E10747DAB98D3 }}
           package: .
           startup-command: 'uvicorn main:app --reload'
-          env: |
-            AUTHOR=${{ secrets.AUTHOR }}
-            API_OPENAI=${{ secrets.API_OPENAI }}
-            API_PINECONE=${{ secrets.API_PINECONE }}
