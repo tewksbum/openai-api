@@ -61,6 +61,6 @@ jobs:
           app-name: 'mrt-test-api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_38D0139B22FC48D09E5E10747DAB98D3 }}
-          package: .
-          startup-command: uvicorn main:app
+          # package: .
+          # startup-command: uvicorn main:app
           # startup-command: uvicorn main:app --host 0.0.0.0 --port 8000  --reload
