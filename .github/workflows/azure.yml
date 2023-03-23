@@ -57,6 +57,8 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+          environment: azurecloud
+          allow-no-subscriptions: false
           
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
