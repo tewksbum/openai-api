@@ -13,9 +13,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
-# gunicorn main:app
-
 app.include_router(compose_router, prefix="/api/v1")
 
 @app.get("/")
@@ -24,5 +21,3 @@ def read_root():
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000)
-    # uvicorn.run("main:app", host="0.0.0.0", port=8000, workers=4, worker_class="uvicorn.workers.UvicornWorker")
-    # gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app    
